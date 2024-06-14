@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <style>
+       *{
+           margin: 0;
+           padding: 0;
+           box-sizing: border-box;
+       }
+
+      .container{
+        max-width: 1200px;
+        margin: 0 auto;
+        
+      }
+
+      ul{
+        list-style: none;
+      }
+
+     
+
+      header{
+        background-color: black;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        box-shadow: 3px 3px 5px rgba(236, 231, 231, 0.398);
+      }
+
+      nav{
+        display: flex;
+        justify-content: space-around;
+        color: white;
+        align-items: center;
+        padding: 20px;
+
+      }
+      .logo{
+        font-size: 32px;
+        font-weight: 700;
+        transition: all;
+      }
+
+      .logo:hover{
+         color: red;
+      }
+      nav ul{
+        display: flex;
+        gap: 20px;
+        transition: all;
+      }
+
+      nav ul li{
+        border-bottom: 2px solid transparent;
+        transition: 0.2s ease-in;
+        font-size: 1.3rem;
+        font-weight: 400;
+      }
+
+      nav ul li:hover{
+        border-bottom: 2px solid red;
+        transition: 0.2s ease-in;
+        transform: scale(1.1);
+        color: red;
+      }
+
+      /* Home Section */
+
+     .home_section{
+      background-color: black;
+      color: white;
+      padding: 40px;
+     }
+
+     .home_section .container{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      
+     }
+
+
+
+     .imagebox{
+      transition: all 0.4s ease-in;
+     }
+
+
+     .imagebox img{
+        width: 350px;
+        height: 430px;
+        border-radius: 45%;
+     }
+
+     .imagebox:hover{
+      transform: scale(1.1);
+     }
+
+     .contentbox{
+      display: grid;
+      place-items: center;
+     }
+
+     .contentbox h1{
+      font-size: 30px;
+      font-weight: bold;
+     }
+
+     .contentbox h2{
+      font-size: 40px;
+     }
+
+     #Hi-text{
+      font-size: 60px;
+      font-weight: bold;
+      color: red;
+     }
+
+     #name-text{
+      font-size: 50px;
+     }
+
+     @media (max-width:900px) {
+      nav{
+        flex-direction: column;
+        gap: 25px;
+      }
+
+      .home_section .container{
+        flex-direction: column;
+        gap: 25px;
+      }
+
+      #Hi-text{
+      font-size: 40px;
+      font-weight: bold;
+      color: red;
+     }
+
+     .contentbox h2{
+      font-size: 25px;
+     }
+
+     #name-text{
+      font-size: 30px;
+     }
+
+      .imagebox img{
+        width: 330px;
+        height: 410px;
+        border-radius: 48%;
+     }
+     }
+
+     /* About Section */
+
+     .about_section{
+      background-color: black;
+      color: white;
+      padding: 50px;
+     }
+
+     .about_section .container{
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      padding: 40px;
+     }
+
+     #about-text{
+      font-size: 30px;
+      margin-bottom: 8px;
+     }
+
+     #about-text span:hover{
+      border-bottom: 2px solid red;
+     }
+
+     #para{
+      line-height: 30px;
+     }
+
+
+     #here{
+        margin-top: 3rem;
+        width: 70px;
+        height: 25px;
+        font-size: 14px;
+        background-color:black;
+        color: white;
+        text-align: center;
+        border-radius: 0.4rem;
+        border: 1px solid white;
+        transition: all;
+    }
+
+    #here:hover{
+        transform: scale(1.1);
+        box-shadow: 0px 0px 2px 2px red;
+    }
+
+    /* Skills Section */
+
+    .skills_section .container{
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      padding: 40px;
+    }
+
+    .box{
+      width: 500px;
+      height: 400px;
+      background-color: black;
+      color: white;
+      padding-top: 20px;
+      transition: all 1s ease;
+    }
+
+    .box:hover{
+      border: 1px solid red;
+    }
+
+    .skills_section{
+      background-color: black;
+      color: white;
+      padding: 25px;
+     }
+
+    #skill-text{
+      font-size: 30px;
+      margin-bottom: 30px;
+     }
+
+     #skill-text span:hover{
+      border-bottom: 2px solid red;
+     }
+
+     .skills_container{
+      display: flex;
+      justify-content: space-around;
+      color: black;
+     }
+
+     /* Project Section */
+
+    .project_section{
+      background-color: black;
+      color: white;
+      padding: 25px;
+    }
+
+    .project_section .container{
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+    }
+
+    .project_box{
+      width: 930px;
+      height: 730px;
+      margin-top: 40px;
+      text-align: center;
+      align-items: center;
+      transition: all 1s ease;
+    }
+
+    .project_box:hover{
+      border: 1px solid red;
+    }
+
+    #skill-logo{
+      width: 390px;
+      height: 300px;
+    }
+
+    #skill-list{
+      display: flex;
+      justify-content: space-around;
+      margin-left: 5px;
+      margin-top: 12px;
+      font-weight: 600;
+    }
+
+    #skill-list li{
+      margin-left: 10px;
+    }
+
+    #project-img1{
+      width: 700px;
+      height: 590px;
+      margin-top: 20px;
+    }
+
+    #project-img2{
+      width: 900px;
+      height: 500px;
+      margin-top:50px;
+    }
+
+    #form-text{
+      margin-top: 8px;
+      margin-bottom: 14px;
+    }
+
+    #watch-text{
+      margin-top: 8px;
+      margin-bottom: 20px;
+    }
+
+    #w-para{
+      margin-top: 20px;
+    }
+
+    #project-img3{
+      width: 900px;
+      height: 520px;
+      margin-top: 40px;
+    }
+
+    #restaurant-text{
+      margin-top:20px ;
+    }
+
+    #r-para{
+      padding: 12px;
+      margin-top: 4px;
+    }
+
+    #y-para{
+      margin-top: 30px;
+      padding: 12px;
+    }
+     
+    #project-img4{
+      width: 800px;
+      height: 420px;
+      margin-top: 40px;
+    }
+
+    #youtube-text{
+      margin-top: 26px;
+    }
+
+    /* Contact Section */
+
+    .contact_section{
+      background-color: black;
+      color: white;
+      padding: 25px;
+    }
+
+    .contact_section .container{
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+    }
+
+    .contact-box{
+      width: 700px;
+      height: 300px;
+      margin-top: 10px;
+      text-align: center;
+      padding: 40px;
+      transition: all 1s ease;
+    }
+
+    .contact-box:hover{
+      border: 1px solid red;
+    }
+
+    #contact-text{
+      font-size: 30px;
+      margin-bottom: 30px;
+     }
+
+     #contact-text span:hover{
+      border-bottom: 2px solid red;
+     }
+
+     #nep{
+      font-size: 22px;
+      background-color: rgb(209, 204, 204);
+      color: black;
+      border-radius: 40px;
+     }
+
+    /* footer */
+
+    footer{
+      text-align: center;
+      padding: 20px;
+      background-color: black;
+      color: white;
+      transition: all 1s ease;
+    }
+
+    footer:hover{
+      border: 1px solid red ;
+    }
+
+    </style>
+</head>
+<body>
+    
+<header>
+    <nav class="container">
+        <div class="logo">
+            Encryptix
+        </div>
+        <ul>
+           <li>Home</li>
+           <li>About</li>
+           <li>Skill</li>
+          <li>Project</li>
+          <li>Contact</li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+  <section class="home_section">
+      <div class="container">
+
+        <div class="contentbox">
+        <h1>
+          <span id="Hi-text">Hi</span>, I am
+          <span id="name-text">Deepak Nagar</span>
+        </h1>
+        <h2>Frontend Developer</h2>
+        <input type="button" id="here" value="Hire Me">
+      </div>
+       
+      <div class="imagebox">
+        <img src="myimg.jpg" alt="deepak nagar">
+      </div>
+
+    </div>
+  </section>
+<hr>
+  <section class="about_section">
+       <div class="container">
+
+          <h2 id="about-text"><span>About Me</span></h2>
+          <p id="para">I'm Web Developer and i am like to create Portfolio incorporates a dark bg amd light colors for other elements like fonts and icons,which is a great way to highlight important details. </p>
+
+       </div>
+  </section>
+  <hr>
+  <section class="skills_section">
+        <div class="container">
+          
+          <h2 id="skill-text"><span>My Top Skills</span></h2>
+          <div class="skills_container">
+            <div class="box">
+              <ul id="skill-list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JAVASCRIPT</li>
+              </ul>
+              <img id="skill-logo" src="skills logo.png" alt="skills">
+            </div>
+            </div>
+        </div>
+  </section>
+<hr>
+  <section class="project_section">
+    <div class="container">
+      <h2 id="skill-text"><span>Some of my Recent Projects</span></h2>
+        <div class="project_box">
+          <img id="project-img1" src="myproject1.png" alt="form project">
+          <h2 id="form-text">Login Form</h2>
+          <p>Login forms are one of the most important user interface elements in mobile applications and websites login page with a members-only area.</p>
+        </div>
+        <div class="project_box">
+          <img id="project-img2" src="watchwebpage.png" alt="watchwebpage">
+          <h2 id="watch-text">Watche webpage</h2>
+          <p  id="w-para">The idea for The Watch Pages came about because people were often asking us for advice about which watch they should buy. The more this happened — and it happened a lot — the more we realized that searching for a watch online is a minefield of information</p>
+        </div>
+        <div class="project_box">
+          <img id="project-img3" src="restaurantwebsite.png" alt="restaurant webpage">
+          <h2 id="restaurant-text">Restaurant Website</h2>
+          <p id="r-para">Building the best restaurant website doesn’t have to be a time-consuming or difficult task. In many cases, there are simple things you can build into your website to share the most important information with your frequent and potential guests, especially as a way to direct customer traffic to online ordering. 
+
+            A great restaurant website supports all of your restaurant marketing activities: it can attract new customers, maintain loyal ones, and raise the overall profile of the establishment outside of the physical location. It's a crucial aspect of running a successful business.</p>
+        </div>
+        <div class="project_box">
+          <img id="project-img4" src="youtubeclone.png" alt="youtube clone">
+          <h2 id="youtube-text">Youtube Clone</h2>
+          <p id="y-para">I am build a YouTube clone step by step. learn with to create layouts and add content to those layouts.The YouTube clone project is a software development project that aims to recreate the functionality and user experience of YouTube, but with a focus on using different and new programming languages and frameworks to build the platform.
+        </div>
+        
+    </div>
+  </section>
+  <section class="contact_section">
+     <div class="container">
+      <h2 id="contact-text"> <span> Contact Me </span></h>
+        <div class="contact-box">
+         <p id="nep">Name :  Deepak Nagar</p>
+         <br>
+         <br>
+         <p id="nep">Email : dd7957627@gmail.com</p>
+         <br>
+         <br>
+         <p id="nep">Contact No :  9098726841</p>
+        </div>
+
+     </div>
+  </section>
+  
+</main>
+
+<footer>
+  &#9400; Personal Portfolio 2024
+</footer>
+
+</body>
+</html>
